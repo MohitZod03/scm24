@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" th:insert="~{base::parent(~{::#content},~{::title}, ~{::script})}">
+
+<head></head>
+<title data-th-text="${loggedUser.name}+' | Dashboard'"></title>
+
+<body>
+
+    <div id="content">
+
+        <div th:if="${loggedUser}">
+            <div data-th-replace="~{user/sidebar :: sidebar}"></div>
+        </div>
+
+        <div class="pl-64 mt-20" style="height: 1000px">
+
+            <h1 class="text-5xl">welcome to the dashbord page..</h1>
+            <h2>it is containt from the base class...</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repellendus reiciendis officiis veniam? Quas molestiae asperiores molestias ad dolor laborum repellat, beatae pariatur, reprehenderit sit praesentium accusantium porro mollitia
+                cumque!
+            </p>
+        </div>
+    </div>
+    <script>
+        console.log("it is script from the dashboard");
+    </script>
+
+</body>
+
+</html>
