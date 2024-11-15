@@ -74,6 +74,27 @@ public class PageController {
         return "register";
     }
 
+    // feature show page here ...
+    @RequestMapping("/feature")
+    public String getfeature() {
+        return "feature";
+    }
+
+// support me page...
+
+@RequestMapping("/help")
+public String getSupport() {
+    return "help";
+}
+
+@PostMapping("/issue")
+public String putIssue(){
+    return"help";
+}
+
+
+
+
     // form processing here....
 
     @PostMapping("/do-register")

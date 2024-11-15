@@ -13,7 +13,7 @@
     <title th:replace="${title}">Document</title>
 </head>
 
-<body class="  bg-gray-200 text-black dark:text-white  dark:bg-gray-600 m-0 p-0">
+<body class="  bg-gray-200 text-black dark:text-white  dark:bg-gray-400 mt-12 pt-5">
 
     <!-- if the user login then this nav bar use  -->
     <div data-th-if="${loggedUser}">
@@ -25,12 +25,12 @@
     </div>
 
 
-    <div th:replace="${content} "></div>
+    <div  th:replace="${content} "></div>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script data-th-src="@{ '/js/script.js'} "></script>
-    <th:block data-th-replace="${script}"></th:block>
+    <th:block data-th-replace="${script}"></th:block> 
 </body>
 
 </html>

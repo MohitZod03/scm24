@@ -1,27 +1,204 @@
 <!DOCTYPE html>
 <html lang="en" th:insert="~{base::parent(~{::#content},~{::title},~{::script})}">
 
-<head></head>
-<title>home</title>
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCM24 - Smart Contact Management</title>
+    <!-- Include Tailwind CSS -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- Include Icons -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> -->
+</head>
 <body>
 
 
-    <div id="content">
-        <h2>it is containt from the base class...</h2>
-        <h1>hii</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repellendus reiciendis officiis veniam? Quas molestiae asperiores molestias ad dolor laborum repellat, beatae pariatur, reprehenderit sit praesentium accusantium porro mollitia
-            cumque!
-        </p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, facere? Veniam vitae illo provident dolorum quo, nulla culpa reiciendis commodi odio quidem adipisci earum quam minus laudantium inventore quasi magnam recusandae porro nobis! Eveniet facere
-        veniam numquam quidem pariatur vel dolorum, ratione est vero fugit quae nam impedit explicabo quos quam rem debitis dignissimos. Quam itaque amet alias praesentium voluptatibus vel a ut adipisci veniam, omnis atque eligendi! Blanditiis aliquam
-        asperiores recusandae dolorem accusamus doloremque nobis architecto alias deleniti quia quo nisi molestias nemo sequi earum sapiente nostrum vero soluta corporis provident iure, dignissimos, cum ut expedita. Ea, quo? Aperiam veniam vero ea, fugiat
-        commodi nihil provident nobis magni ut esse numquam. Provident molestiae aut accusamus sequi! Illo maiores, ipsum voluptate ea animi veniam blanditiis incidunt porro eveniet doloribus molestias ex autem dolorum consequuntur similique ullam nisi
-        in sed impedit fugit quam! Provident dolores fugiat rem error vel, veritatis vitae.
+    <div id="content" >
+<div class="bg-slate-50  dark:bg-slate-400">
+    <div class="min-h-screen bg-gray-50 dark:bg-gray-600 ">
+        <!-- Navigation -->
+        <div class="bg-white shadow-lg ">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <span class="text-2xl font-bold text-blue-600">SCM24</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <a href="/feature" class="text-gray-600 hover:text-blue-600">Features</a>
+                        <a href="/help" class="text-gray-600 hover:text-blue-600">Support</a>
+                        <a data-th-href="@{'/user/profile'}" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Hero Section -->
+        <div class="bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-left">
+                        <h1 class="text-4xl font-bold text-gray-900 sm:text-6xl">
+                            <span class="text-blue-600">SCM24</span> Smart Contact Management
+                        </h1>
+                        <p class="mt-6 text-xl text-gray-600">
+                            Transform the way you manage your contacts with intelligent organization
+                        </p>
+                        <div class="mt-10">
+                            <a data-th-href="@{'/user/profile'}" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                                Get Started
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="images/homepageImg.svg" alt="Dashboard Preview" class="rounded-lg shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Features Section -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900">
+                    Powerful Features
+                </h2>
+                <p class="mt-4 text-gray-600">
+                    Everything you need to manage your professional network effectively
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Smart Organization</h3>
+                    <p class="mt-2 text-gray-600">
+                        Automatically organize and categorize your contacts
+                    </p>
+                </div>
+    
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Advanced Search</h3>
+                    <p class="mt-2 text-gray-600">
+                        Find contacts instantly with powerful search
+                    </p>
+                </div>
+    
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900">Secure Storage</h3>
+                    <p class="mt-2 text-gray-600">
+                        Keep your contacts safe with encryption
+                    </p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Statistics Section -->
+        <div class="bg-blue-50 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <div class="text-4xl font-bold text-blue-600">10M+</div>
+                        <div class="mt-2 text-gray-600">Contacts Managed</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <div class="text-4xl font-bold text-blue-600">50K+</div>
+                        <div class="mt-2 text-gray-600">Active Users</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition-shadow">
+                        <div class="text-4xl font-bold text-blue-600">99.9%</div>
+                        <div class="mt-2 text-gray-600">Uptime</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- CTA Section -->
+        <div class="bg-blue-600">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold text-white">
+                        Ready to Transform Your Contact Management?
+                    </h2>
+                    <p class="mt-4 text-xl text-blue-100">
+                        Join thousands of professionals who trust SCM24
+                    </p>
+                    <div class="mt-8">
+                        <a data-th-href="@{'/user/profile'}" class="inline-flex items-center px-6 py-3 border-2 border-white text-base font-medium rounded-md text-white hover:bg-white hover:text-blue-600 transition-colors">
+                           Get Started
+                           
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">SCM24</h3>
+                        <p class="text-gray-400">Smart Contact Management Solution</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Features</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a href="#" class="hover:text-white">Organization</a></li>
+                            <li><a href="#" class="hover:text-white">Search</a></li>
+                            <li><a href="#" class="hover:text-white">Security</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Company</h4>
+                        <ul class="space-y-2 text-gray-400">
+                            <li><a data-th-href="@{'/about'}" class="hover:text-white">About</a></li>
+                            <li><a data-th-href="@{'/help'}" class="hover:text-white">Support</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-4">Connect</h4>
+                        <div class="flex space-x-4 text-2xl">
+                            <a data-th-href="@{'https://www.linkedin.com/in/mohit-2003zod/'}" class="hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+                            <a data-th-href="@{'https://github.com/MohitZod03'}" class="hover:text-blue-400"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
+                    <p>&copy; 2024 SCM24. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
     </div>
+    
+    <!-- Add basic animation script -->
     <script>
-        console.log("it is script from the home");
+    document.addEventListener('DOMContentLoaded', function() {
+        // Add fade-in animation to elements
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach(element => {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        });
+    });
     </script>
-</body>
+
+</div>
+
+
+
+        </body>
 
 </html>

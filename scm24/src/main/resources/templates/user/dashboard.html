@@ -12,13 +12,54 @@
             <div data-th-replace="~{user/sidebar :: sidebar}"></div>
         </div>
 
-        <div class="pl-64 mt-20" style="height: 1000px">
+        <div class="pl-64 mt-0" >
 
-            <h1 class="text-5xl">welcome to the dashbord page..</h1>
-            <h2>it is containt from the base class...</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit repellendus reiciendis officiis veniam? Quas molestiae asperiores molestias ad dolor laborum repellat, beatae pariatur, reprehenderit sit praesentium accusantium porro mollitia
-                cumque!
-            </p>
+ <!-- Top Navigation Bar -->
+
+<!-- Main Container with Sidebar and Content -->
+<div class="flex pt-16">
+
+    <!-- Main Dashboard Content -->
+    <main class="flex-1 bg-gray-100 p-10 ml-64">
+        <h2 class="text-4xl font-bold text-gray-800 mb-4">Dashboard Overview</h2>
+
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <!-- Card 1 -->
+            <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition">
+                <h3 class="text-xl font-semibold text-gray-700">Total Contacts</h3>
+                <p class="text-3xl font-bold text-blue-600 mt-2 " >45</p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition">
+                <h3 class="text-xl font-semibold text-gray-700">New Messages</h3>
+                <p class="text-3xl font-bold text-green-600 mt-2">10</p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition">
+                <h3 class="text-xl font-semibold text-gray-700">Feedbacks Received</h3>
+                <p class="text-3xl font-bold text-yellow-600 mt-2">7</p>
+            </div>
+        </div>
+
+        <!-- Recent Activity Section -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Recent Activities</h3>
+            <ul>
+                <li class="py-2 border-b border-gray-200">You added a new contact, John Doe.</li>
+                <li class="py-2 border-b border-gray-200">You received a message from Sarah.</li>
+                <li class="py-2 border-b border-gray-200">Feedback received from user Mike.</li>
+                <li class="py-2">Contact Michael's details updated.</li>
+            </ul>
+        </div>
+    </main>
+</div>
+
+
+
+
         </div>
     </div>
     <script>

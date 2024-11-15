@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" th:insert="~{base::parent(~{::#content},~{::title},~{::script})}"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCM24 - Smart Contact Management</title>
+    <!-- Include Tailwind CSS -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- Include Icons -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> -->
+</head>
+<body>
+
+
+    <div id="content">
+        <div class="">
+            <div class="bg-blue-600 text-white py-24 mt-20 mb-8 ">
+                <div class="container mx-auto px-4 text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-10">Powerful Features for Smart Contact Management</h1>
+                    <p class="text-xl opacity-90 max-w-2xl mx-auto">Discover all the tools and features that make SCM24 the perfect solution for managing your contacts efficiently.</p>
+                </div>
+            </div>
+        
+            <!-- Main Features Section -->
+            <section class="py-20">
+                <div class="container mx-auto px-4">
+                    <!-- Contact Management -->
+                    <div class="mb-20">
+                        <h2 class="text-3xl font-bold text-center mb-16">Core Features</h2>
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <!-- Contact Organization -->
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                                <div class="text-blue-600 mb-4">
+                                    <i class="fas fa-address-book text-4xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Contact Organization</h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Custom contact fields</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Smart categorization</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Quick search & filters</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Bulk contact management</li>
+                                </ul>
+                            </div>
+        
+                            <!-- Communication Tools -->
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                                <div class="text-blue-600 mb-4">
+                                    <i class="fas fa-comments text-4xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Communication Tools</h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Email integration</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>SMS notifications</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Communication history</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Template messages</li>
+                                </ul>
+                            </div>
+        
+                            <!-- Data Management -->
+                            <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                                <div class="text-blue-600 mb-4">
+                                    <i class="fas fa-database text-4xl"></i>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Data Management</h3>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Import/Export contacts</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Automatic backups</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Data encryption</li>
+                                    <li><i class="fas fa-check text-green-500 mr-2"></i>Version history</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Advanced Features -->
+                    <div class="mb-20 mt-6">
+                        <h2 class="text-3xl font-bold text-center mb-16">Advanced Features</h2>
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <!-- Collaboration Tools -->
+                            <div class="bg-white p-8 rounded-lg shadow-md">
+                                <div class="flex items-start">
+                                    <div class="text-blue-600 mr-4">
+                                        <i class="fas fa-users-gear text-4xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-3">Team Collaboration</h3>
+                                        <p class="text-gray-600 mb-4">Work together efficiently with your team members</p>
+                                        <ul class="space-y-2 text-gray-600">
+                                            <li><i class="fas fa-check text-green-500 mr-2"></i>Shared contacts and groups</li>
+                                            <li><i class="fas fa-check text-green-500 mr-2"></i>Role-based access control</li>
+                                            <li><i class="fas fa-check text-green-500 mr-2"></i>Activity tracking</li>
+                                            <li><i class="fas fa-check text-green-500 mr-2"></i>Team chat integration</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <!-- Analytics & Reporting -->
+                            <div class="bg-white p-8 rounded-lg shadow-md">
+                                <div class="flex items-start">
+                                    <div class="text-blue-600 mr-4">
+                                        <i class="fas fa-chart-line text-4xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold mb-3">Analytics & Reporting</h3>
+                                        <p class="text-gray-600 mb-4">Gain insights from your contact data</p>
+                                        <ul class="space-y-2 text-gray-600">
+                                            <li><i class="fas fa-check text-green-500 mr-2"></i>Custom reports</li>
+                                            <li><i class="fas fa-check text-green-500 mr-2"></i>Contact analytics</li>
+                                            <li><i class="fas fa-check text-green-500 mr-2"></i>Engagement tracking</li>
+                                            <li><i class="fas fa-check text-green-500 mr-2"></i>Export capabilities</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Integration Section -->
+                    <div class="text-center mb-20 mt-6">
+                        <h2 class="text-3xl font-bold mb-16">Integrations</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                            <!-- Gmail -->
+                            <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                                <i class="fab fa-google text-4xl text-red-500 mb-4"></i>
+                                <h3 class="font-semibold">Gmail</h3>
+                            </div>
+                            <!-- Outlook -->
+                            <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                                <i class="fas fa-envelope text-4xl text-blue-500 mb-4"></i>
+                                <h3 class="font-semibold">Outlook</h3>
+                            </div>
+                            <!-- Slack -->
+                            <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                                <i class="fab fa-slack text-4xl text-purple-500 mb-4"></i>
+                                <h3 class="font-semibold">Slack</h3>
+                            </div>
+                            <!-- Calendar -->
+                            <div class="p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                                <i class="far fa-calendar text-4xl text-green-500 mb-4"></i>
+                                <h3 class="font-semibold">Calendar</h3>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- CTA Section -->
+                    <div class="text-center mb-6 mt-6 ">
+                        <h2 class="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+                        <p class="text-gray-600 mb-8">Join thousands of users who trust SCM24 for their contact management needs</p>
+                        <div class="flex justify-center space-x-4">
+                            <button class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                                Start Free Trial
+                            </button>
+                            <button class="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors duration-300">
+                                Schedule Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Footer -->
+            <footer class="bg-gray-800 text-white py-12 mt-16">
+                <div class="container mx-auto px-4">
+                    <div class="grid md:grid-cols-4 gap-8">
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">SCM24</h4>
+                            <p class="text-gray-400">Transform the way you manage your contacts with intelligent organization</p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Quick Links</h4>
+                            <ul class="space-y-2">
+                                <li><a href="home.html" class="text-gray-400 hover:text-white">Home</a></li>
+                                <li><a href="feature.html" class="text-gray-400 hover:text-white">Features</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-white">Pricing</a></li>
+                                <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Legal</h4>
+                            <ul class="space-y-2">
+                                <li><a href="" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                                <li><a href="" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                                <li><a href="" class="text-gray-400 hover:text-white">Cookie Policy</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="/home" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                                <a href="" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/zodmohit_03/profilecard/?igsh=czZyMDAwZm1lM3Ji" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                        <p>&copy; 2024 SCM24. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+    
+        </div>
+        <!-- Add basic animation script -->
+        </body>
+
+</html>

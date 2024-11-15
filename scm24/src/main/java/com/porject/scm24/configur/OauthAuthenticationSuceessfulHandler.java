@@ -44,13 +44,13 @@ public class OauthAuthenticationSuceessfulHandler implements AuthenticationSucce
 
 // crate variable which hold token..
 
-lombok.var oauth2AuthenticationClindToken =(OAuth2AuthenticationToken) authentication;
+var oauth2AuthenticationClindToken =(OAuth2AuthenticationToken) authentication;
  
 String authorizeclientRegistratonId  =oauth2AuthenticationClindToken.getAuthorizedClientRegistrationId();
 
 logger.info(authorizeclientRegistratonId);
 
-lombok.var ouatUser = (DefaultOAuth2User)authentication.getPrincipal();
+var ouatUser = (DefaultOAuth2User)authentication.getPrincipal();
 
 
 // get the user object to store the authenticater detail in db..

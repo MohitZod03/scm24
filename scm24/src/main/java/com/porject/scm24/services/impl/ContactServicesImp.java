@@ -9,16 +9,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import com.porject.scm24.entety.Contact;
 import com.porject.scm24.entety.User;
 import com.porject.scm24.helper.ResourceNotFoundException;
 import com.porject.scm24.repository.ContactRepo;
 import com.porject.scm24.services.ContactService;
-
-
-import lombok.var;
 
 @Service
 public class ContactServicesImp implements ContactService {

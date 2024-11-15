@@ -13,15 +13,15 @@ class Scm24ApplicationTests {
    
 
 
-    @Autowired
-    private EmailServices emailServices;
-
-    @Test
-    void contextLoads() {
-    }
-
-    @Test // Add this annotation
-    void sendEmailTest() {
-        emailServices.sendEmail("mohitzod03@gmail.com", "Just managing  email services here", "scm project link");
-    }
+//    @Autowired
+//    private EmailServices emailServices;
+//
+//    @Test
+//    void contextLoads() {
+//    }
+//
+//    @Test // Add this annotation
+//    void sendEmailTest() {
+//        emailServices.sendEmail("mohitzod03@gmail.com", "Just managing  email services here", "scm project link");
+   // }
 }

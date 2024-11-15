@@ -1,10 +1,9 @@
 package com.porject.scm24.entety;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
-
 import java.util.List;
-
 import java.util.stream.Collectors;
 
 import org.springframework.security.core.GrantedAuthority;
@@ -36,116 +35,92 @@ import lombok.ToString;
 @Table(name = "users_detail")
 @Getter
 @Setter
-@NoArgsConstructor
+@NoArgsConstructor(force = true)
 @AllArgsConstructor
 @ToString
 @Builder
-
 public class User implements UserDetails {
     @Id
-    private String userId;
+    private  String userId;
 
-    @Column(name = "username",nullable = false)
+    @Column(name = "username", nullable = false)
     private String name;
 
-    @Column(unique = true , nullable = false)
+    @Column(unique = true, nullable = false)
     private String email;
-    
-     @Getter(value = AccessLevel.NONE)
-     @JsonIgnore
+
+    @Getter(value = AccessLevel.NONE)
+    @JsonIgnore
     private String password;
 
     @Column(length = 1000)
     private String about;
-    
+
     @Column(length = 1000)
     private String profilePic;
     private String phoneNumber;
 
-    // this is for the verification of user/ email is verifed or not..
-    @Getter(value = AccessLevel.NONE)
-    private boolean enabled=false;
+    @Builder.Default
+    private boolean enabled = false;
 
-    
-    
-    
+    @Builder.Default
+    private boolean emailVerified = false;
 
-    private boolean emailVerified =false;
-     private boolean phoneVerified =false; 
+    @Builder.Default
+    private boolean phoneVerified = false;
 
-     /// self , google , linkdin , github , facebook....
-@Enumerated(value = EnumType.STRING)
-private Providers provider= Providers.SELF;
+    @Enumerated(value = EnumType.STRING)
+    @Builder.Default
+    private Providers provider = Providers.SELF;
 
-private String providerUserId;
+    private String providerUserId;
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    @JsonManagedReference
+    private List<Contact> contacts = new ArrayList<>();
 
- @OneToMany(mappedBy = "user",cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
-  @JsonManagedReference  // Add this to properly handle the bidirectional relationship
-  private List<Contact> contacts= new ArrayList<>();
+    @ElementCollection(fetch = FetchType.EAGER)
+    @Builder.Default
+    private List<String> roleList = new ArrayList<>();
 
+    private  String emailToken;
+    private final LocalDateTime createdAt = LocalDateTime.now();
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        Collection<SimpleGrantedAuthority> roles = roleList.stream()
+                .map(SimpleGrantedAuthority::new)
+                .collect(Collectors.toList());
+        return roles;
+    }
 
+    @Override
+    public String getUsername() {
+        return this.email;
+    }
 
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
 
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
 
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
 
- // override some method to allow for authenticati...
+    @Override
+    public boolean isEnabled() {
+        return this.enabled;
+    }
 
-
-  // create list that store the user roles inside for athentication...
-
-  @ElementCollection(fetch = FetchType.EAGER)// it stored multiple roles of user in single entity..
-  private List<String> roleList =new ArrayList<>();
-
-// this is for the teke verification of user using  token after the signup...
-  private String emailToken;
-
-
-@Override
-public Collection<? extends GrantedAuthority> getAuthorities() {
-  
-// for the grantedAuthority doing this ...
-//list of roles[USER,ADMIN]
-// create SimpleGrantedAuthority[roles{ADMIN,USER}]
-  Collection<SimpleGrantedAuthority> roles =  roleList.stream().map(role->new SimpleGrantedAuthority(role)).collect(Collectors.toList());
-
- return roles;
-}
-
-// email is our username for this project...
-@Override
-public String getUsername() {
- 
- return this.email;
-}
-
-@Override
-public boolean isAccountNonExpired() {
-  return true;
-}
-
-@Override
-public boolean isAccountNonLocked() {
-	return true;
-}
-
-@Override
-public boolean isCredentialsNonExpired() {
-	return true;
-}
-@Override
-public boolean isEnabled() {
-  return this.enabled;
-}
-
-// password that is use by user.
-@Override
-public String getPassword() {
- 
-
-  return this.password;
-  
-}
-
+    @Override
+    public String getPassword() {
+        return this.password;
+    }
 }

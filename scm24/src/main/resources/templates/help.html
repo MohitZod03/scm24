@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" th:insert="~{base::parent(~{::#content},~{::title},~{::script})}"
+      xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head></head>
+<title>contact</title>
+
+<body>
+
+    <div id="content">
+<div>
+     <!-- Main Content -->
+     <main class="container pt-24 mx-auto p-6 bg-white rounded-lg shadow-md max-w-lg mt-24 ">
+        <h2 class="text-3xl font-bold text-gray-700 text-center mb-6">Contact Me</h2>
+
+        <!-- Contact Form -->
+        <form  data-th-action="@{'/help'}" method="POST" class="space-y-4">
+            <div>
+                <label for="name" class="block text-gray-600 font-medium">Name</label>
+                <input type="text" id="name" name="name" required class="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Name">
+            </div>
+
+            <div>
+                <label for="email" class="block text-gray-600 font-medium">Email</label>
+                <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Email">
+            </div>
+
+            <div>
+                <label for="subject" class="block text-gray-600 font-medium">Subject</label>
+                <input type="text" id="subject" name="subject" required class="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Subject">
+            </div>
+
+            <div>
+                <label for="message" class="block text-gray-600 font-medium">Message</label>
+                <textarea id="message" name="message" rows="5" required class="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your Message"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-2 rounded-md hover:bg-blue-700">Send Message</button>
+        </form>
+    </main>
+</div>
+
+
+
+
+    </div>
+    <script>
+        console.log("it is script from the contact");
+    </script>
+</body>
+
+</html>
